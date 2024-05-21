@@ -9,7 +9,7 @@ body {
       margin-bottom: 2em;
   }
   textarea {
-    width: 100%;
+    width: 75%;
   }
   .content-head {
     font-weight: 400;
@@ -32,7 +32,7 @@ body {
   button {
     float: right;
   }
-  #name, #email {
+  #name, #email ,#number {
     width: 50%;
   }
   .honeypot-field {
