@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linking Font Awesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <title>MatJ</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <nav class="p-3 flex bg-white justify-between items-center">
+
+        <!--Putting Logo at Right
+        -->
+        <a href="index.html" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-w-22 max-h-20" src="./assets/templogo.jpg" alt="Logo">
+            <span class='text-lg font-medium font-display'>MATj Medical</span>
+        </a>
+
+        <!--Making Navigation Bar for Laptops--> 
+
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="index.html" class="font-medium hover:text-primary">About Us</a>
+            <a href="#" class="font-medium hover:text-primary">Our Products</a> 
+            <a href="contact.html" class="font-medium hover:text-primary">Contact Us</a>
+            <a href="#" class="font-medium hover:text-primary">Login</a>
+        </div>
+        
+        <!--Whatsapp Us Option--> 
+
+        <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>
+                Whatsapp Us
+            </span>
+        </button>
+
+        <!--Making Navigation Bar for Mobiles --> 
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 lg:hidden bg-white inset-0 p-3">
+        <div id="nav-bar" class="flex justify-between">
+
+            <a href="index.html" id="brand" class="flex gap-2 items-center">
+                <img class="object-cover max-w-22 max-h-20" src="./assets/templogo.jpg" alt="Logo">
+                <span class='text-lg font-medium font-display'>MATjMedical</span>
+            </a>
+
+            <button class="p-2 lg:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-xmark text-gray-600"></i>
+            </button>
+        </div>
+   
+    <div class="mt-6">
+        <a href="index.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">About Us</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Our Products</a>
+        <a href="contact.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Contact Us</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Login</a>
+        
+    </div>
+    <div class="h-[0.5px] bg-gray-300"></div>
+    <button class=" mt-6 w-full flex gap-2 items-center px-6 py-3 rounded-lg hover:bg-gray-50">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>
+            Whatsapp Us
+        </span>
+    </button>
+
+</div>
+    </nav>
+
+
+    <body>
+        <h2 class="content-head is-center">Contact Us!</h2>
+        <aside>
+             <p>
+                 We would <em>love</em> to hear from you! </p>
+                 <p>Please use the <b><em>Contact Form</em></b>
+                 to send us a message.
+             </p>
+         </aside>
+      
+      <!-- START HERE -->
+         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+         <!-- Style The Contact Form How Ever You Prefer -->
+         <link rel="stylesheet" href="fstyle.css">
+      
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+        action="https://script.google.com/macros/s/AKfycbygDyYYvASg3MJFqHMH6y7yoTiVx5hUb1bdQ1DkqwMPyd6FumQ2_MDC09F2NXFU2iYfjQ/exec">
+          <!-- change the form action to your script url -->
+      
+          <div class="form-elements">
+            <fieldset class="pure-group">
+              <label for="name">Name: </label>
+              <input id="name" name="name" placeholder="What your Mom calls you" />
+            </fieldset>
+      
+            <fieldset class="pure-group">
+              <label for="message">Message: </label>
+              <textarea id="message" name="message" rows="10"
+              placeholder="Tell us what's on your mind..."></textarea>
+            </fieldset>
+      
+            <fieldset class="pure-group">
+              <label for="email"><em>Your</em> Email Address:</label>
+              <input id="email" name="email" type="email" value=""
+              required placeholder="your.name@email.com"/>
+            </fieldset>
+      
+            <fieldset class="pure-group">
+              <label for="color">Favourite Color: </label>
+              <input id="color" name="color" placeholder="green" />
+            </fieldset>
+      
+            <fieldset class="pure-group honeypot-field">
+              <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+              <input id="honeypot" type="text" name="honeypot" value="" />
+            </fieldset>
+      
+            <button class="button-success pure-button button-xlarge">
+              <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+          </div>
+      
+          <!-- Customise the Thankyou Message People See when they submit the form: -->
+          <div class="thankyou_message" style="display:none;">
+            <h2><em>Thanks</em> for contacting us!
+              We will get back to you soon!</h2>
+          </div>
+      
+        </form>
+      
+        <!-- Submit the Form to Google Using "AJAX" -->
+        <script data-cfasync="false"  type="text/javascript" src="form-submission-handler.js"></script>
+
+      </body>
+
+
+
+<script src="script.js"></script>
+</html>
