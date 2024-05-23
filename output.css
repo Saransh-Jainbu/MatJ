@@ -76,6 +76,11 @@
   color: #666;
   margin-top: 0.5rem;
 }
+@media (max-width: 600px) {
+  .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* Ensure at least 2 columns on mobile */
+  }}
+
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
