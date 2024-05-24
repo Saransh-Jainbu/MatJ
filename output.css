@@ -13,6 +13,126 @@
   border-color: #e5e7eb;
   /* 2 */
 }
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header-title {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-card {
+  display: flex;
+  width: 90%;
+  height: auto; /* Change to auto for variable height */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-description {
+  font-size: 20px; /* Increase description font size */
+  margin-bottom: 20px;
+  color: #666;
+  text-align: justify;
+  padding-right: 20px;
+}
+
+.product-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  padding-top: 10px; /* Add padding between buttons and description */
+}
+
+.product-links a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007BFF;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* Add margin bottom between buttons */
+  text-align: center; /* Center text within buttons */
+}
+
+.product-links a:last-child {
+  margin-bottom: 0; /* Remove margin bottom for the last button */
+}
+
+.product-links a:hover {
+  background-color: #0056b3;
+}
+
+.product-image {
+  flex-shrink: 0;
+  width: 100%; /* Change image width */
+  height: auto;
+  margin-left: auto;
+  order: 1;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media only screen and (min-width: 601px) {
+  .product-card {
+      flex-direction: row;
+  }
+
+  .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+  }
+
+  .product-image {
+      width: 50%;
+      max-width: 600px; /* Increase maximum image width for larger screens */
+  }
+}
 
 ::before,
 ::after {
