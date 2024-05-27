@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MatJ</title>
+        <!-- Linking Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        <!-- CSS for navigation bar -->
+        <link rel="stylesheet" href="output.css">
+        <!-- CSS for the rest of the page -->
+        <link rel="stylesheet" href="quote.css">
+    </head>
+
+    <nav class="p-3 flex bg-white justify-between items-center">
+
+        <!--Putting Logo at Right
+        -->
+        <a href="index.html" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-w-22 max-h-20" src="./assets/templogo.jpg" alt="Logo">
+            <span class='text-lg font-medium font-display'>MATj Medical</span>
+        </a>
+
+        <!--Making Navigation Bar for Laptops--> 
+
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="index.html" class="font-medium hover:text-primary">About Us</a>
+            <a href="products.html" class="font-medium hover:text-primary">Our Products</a> 
+            <a href="contact.html" class="font-medium hover:text-primary">Contact Us</a>
+            <a href="#" class="font-medium hover:text-primary">Login</a>
+        </div>
+        
+        <!--Whatsapp Us Option--> 
+
+        <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>
+                Whatsapp Us
+            </span>
+        </button>
+
+        <!--Making Navigation Bar for Mobiles --> 
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 lg:hidden bg-white inset-0 p-3">
+        <div id="nav-bar" class="flex justify-between">
+
+            <a href="index.html" id="brand" class="flex gap-2 items-center">
+                <img class="object-cover max-w-22 max-h-20" src="./assets/templogo.jpg" alt="Logo">
+                <span class='text-lg font-medium font-display'>MATjMedical</span>
+            </a>
+
+            <button class="p-2 lg:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-xmark text-gray-600"></i>
+            </button>
+        </div>
+   
+    <div class="mt-6">
+        <a href="index.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">About Us</a>
+        <a href="products.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Our Products</a>
+        <a href="contact.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Contact Us</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Login</a>
+        
+    </div>
+    <div class="h-[0.5px] bg-gray-300"></div>
+    <button class=" mt-6 w-full flex gap-2 items-center px-6 py-3 rounded-lg hover:bg-gray-50">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>
+            Whatsapp Us
+        </span>
+    </button>
+
+</div>
+    </nav>
+<body>
+    <main>
+        <h1>Get a Quote</h1>
+
+    <!-- Display the selected products and quantities -->
+    <h2>Selected Products</h2>
+    <ul id="selected-products">
+        <!-- Product data will be dynamically populated here using JavaScript -->
+    </ul>
+
+    <!-- Quote Form -->
+    <h2>Fill in Your Details</h2>
+    <form id="quote-form">
+        <!-- Input fields for user details -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company">
+        <br>
+
+        <!-- Add any other fields as needed -->
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Add any necessary JavaScript files -->
+    <script src="quote-form.js"></script>
+    </main>
+</body>
+
+
+<script src="script.js"></script>
+</html>
