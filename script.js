@@ -33,3 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error fetching products:', error);
         });
 });
+
+// Adding Search Bar
+
+document.addEventListener('DOMContentLoaded', function() {
+    var searchInput = document.getElementById('search-input');
+
+    searchInput.addEventListener('input', function() {
+        var query = searchInput.value.toLowerCase();
+        var productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(function(card) {
+            var productName = card.querySelector('.product-title').textContent.toLowerCase();
+            if (productName.includes(query)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
